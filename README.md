@@ -1,80 +1,47 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Flipeat
 
-# Getting Started
+## Prueba técnica
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+La prueba consiste en la realización de una pequeña aplicación en `React Native`
 
-## Step 1: Start the Metro Server
+El objetivo de la prueba es poder comprobar como te desenvuelves, como estructuras el proyecto y como resuelves los posibles problemas que vayan aparenciendo.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+El código deberás de subirlo a este repositorio. Te recomiendo que vayas commiteando tus cambios poco a poco.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Una vez demos por finalizada la prueba, revisaré tu código y tendremos una pequeña charla donde te haré preguntas acerca de él.
 
-```bash
-# using npm
-npm start
+Tómate el tiempo que necesites y si tienes cualquier problema no dudes en consultarme. Mi correo es: carlosrivero@flipeatapp.com
 
-# OR using Yarn
-yarn start
-```
+¡Comenzamos!
 
-## Step 2: Start your Application
+## Flipoke
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Vas a crear una pequeña aplicación con un listado de Pokémon y una vista detalle para cada Pokémon. Para ello usarás la [PokéApi](https://pokeapi.co/) (una API pública y gratuita sobre Pokémon)
 
-### For Android
+La app constará con dos vistas, la principal al abrir la app será un listado de Pokémon, los 151 de la primera edición. Tendrás que hacer una llamada a esta URL `https://pokeapi.co/api/v2/pokemon?limit=151`. Esta te devolverá una lista, con el nombre y el link de los primeros 151 Pokémon.
 
-```bash
-# using npm
-npm run android
+Muestra un listado con los nombres de cada uno de ellos y que al pulsar sobre el nombre te lleve a la siguiente pantalla.
 
-# OR using Yarn
-yarn android
-```
+Esta pantalla será una vista detalle de los datos del Pokémon seleccionado. Por ello tendrás que hacer una llamada al API con la url del listado anterior para poder obtener los datos de dicho Pokémon.
 
-### For iOS
+La respuesta que vas a obtener es grandísima, ni mucho menos tienes que mostrar todos los datos que ahí aparecen ni tienes que realizar más llamadas. Con mostrar el nombre, su número, su imagen (las url de las imágenes se encuentran dentro `sprites.other.dream_world`) y poco más.
 
-```bash
-# using npm
-npm run ios
+El estilo es totalmente libre. Aquí también quiero ver tu parte de creatividad. Por ejemplo puedes buscar una especie de `Card` por Pinterest para guiarte. Simplemente intenta que sea ordenado y limpio, puedes buscar ideas en cualquier sitio, no importa.
 
-# OR using Yarn
-yarn ios
-```
+### Puntos a valorar (de mayor a menor)
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+No es necesario que los apliques todos, puedes incluirlos o no.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+- No utilices `Expo`
+- Testing. No vale con un test que comprueba que renderiza y punto, pero tampoco hagas más test de los necesarios.
+- Typescript
+- Uso de custom hooks. **Pista** puedes crear un hook `usePokemon` que dentro tenga un `useEffect` que haga la llamada al API
+- Gestión de errores
 
-## Step 3: Modifying your App
+### Recomendaciones
 
-Now that you have successfully run the app, let's modify it.
+- Puedes hacer uso de cualquier librería que necesites sin ningún problema
+- Para hacer las llamadas puedes usar el API fetch de JavaScript, Axios, o cualquier otra que conozcas y te sientas cómodo con ella, me da igual cual uses
+- Puedes usar cualquier librería de componentes que te guste o te sientas cómodo con ella, así como no usarla.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-"# react-native-pokeApi" 
+_Pero sobre todo no dudes en preguntarme si tienes cualquier duda, tanto como si no has entendido algo como si no sabes como hacer una cosa y me pides consejo. Somos conscientes de tu experiencia y de que te pueden surgir muchas dudas_
