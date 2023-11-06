@@ -28,7 +28,7 @@ export const PokemonList = () => {
                 marginBottom: top + 40,
               }}
             >
-              Flipoke
+              PokéApi
             </Text>
           }
           initialNumToRender={10}
